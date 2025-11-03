@@ -1,0 +1,44 @@
+*{
+    margin: 0px 0px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    flex-direction: column;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+}
+
+.user h1{
+    font-family: "Poppins", sans-serif;
+}
+
+.container h2 {
+    font-family: "Poppins", sans-serif;
+    padding-top: 8px;
+}
+
+.container span {
+    padding: 5px 12px;
+    margin: 15px 0px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.container span a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+

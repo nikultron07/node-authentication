@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="coin">
+     <div class="coins"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png" height="50px" width="50px"/></div>
+     <h1>Collect Free BTC Coins</h1>
+     </div>
+    <div class="box">
+    <p>Click below to collect your free demo coins!</p>
+    <% if (redirectError && redirectError.length > 0) { %>
+     <script>alert("<%= redirectError[0] %>");</script>
+    <% } %>
+      <a href="/profile">Collect</a>
+   </div>
+
+    <div class="center">
+      <div class="structer">
+        <div>
+        <h2>Create Account</h2>
+        </div> 
+        <div class="content">
+         <form class="form-page" method="post" action="/create">
+             <% if (typeof error !== "undefined" && error) {%>
+                 <p style="color:red;"><%= error %></p>
+            <% } %>
+
+             <input type="text" name="name" placeholder="Name" value="<%= name || '' %>">
+              <input class="inputs" type="email" placeholder="Email" name="email" value="<%= email || '' %>">
+              <input class="inputs" type="password" placeholder="Password" name="password" value="<%= password || ''%>">
+              <button class="create-btn" type="submit">Create Account</button>
+              <span class="login-page"><a href="/login">Already have an account</a></span>
+            </form>
+          </div>
+      </div>
+   </div>
+</body>
+</html>

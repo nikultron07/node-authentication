@@ -1,0 +1,42 @@
+@media(max-width:399px) {
+    .form-page span a{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:283px) {
+    .form-page span a{
+        font-size: 12px;
+    }
+}
+
+@media(max-width:241px) {
+    .form-page span a{
+        font-size: 10px;
+    }
+}
+
+
+@media(max-width:400px) {
+    .coin h1{
+        font-size: 25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:400px) {
+    .box p{
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:283px) {
+    .box p{
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
