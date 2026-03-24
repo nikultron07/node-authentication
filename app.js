@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
+const session = require('express-session');
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/test', {
    useNewUrlParser: true,
@@ -17,7 +18,8 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/test', {
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: { secure: process.env.NODE_ENV === 'production' }
 }));
 
 app.set('view engine', 'ejs');
@@ -122,7 +124,5 @@ function isLoggedIn(req, res, next){
 }
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Server running on http://10.68.97.51:3000');
-});
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
 
