@@ -8,7 +8,6 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const flash = require('connect-flash');
 const mongoose = require('mongoose');
-const session = require('express-session');
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/test', {
    useNewUrlParser: true,
